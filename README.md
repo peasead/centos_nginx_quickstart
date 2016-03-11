@@ -2,7 +2,7 @@
 
 ## SELinux
 
-1. Set `SELINUX=permissive` in `/etc/sysconfig/selinux`
+1. Set `SELINUX=enforcing` in `/etc/sysconfig/selinux`
 1. Reboot
 
 ## Firewall
