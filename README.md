@@ -82,10 +82,6 @@ I did a scan with [nikto](https://cirt.net/Nikto2) and everything looks above bo
 
 This is a [well documented issue with nikto](https://github.com/sullo/nikto/issues?utf8=%E2%9C%93&q=domino). If you can fix the issue and submit a pull to them, I'm sure they'd appreciate it, but as you can check, the directories that they list as vulnerable don't exist because, as previously mentioned, this isn't an IBM Domino web server.
 
-### Port scan
-
-I ran an `nmap` scan against the server to ensure only 22, 80, 443 were open, but someone more creative may want to push a bit harder there.
-
 ## To Do
 
 ### Server Security Check
