@@ -26,7 +26,7 @@ This is the config I found helpful when building a CentOS 7.2 box on Digital Oce
   PasswordAuthentication	no
   ```
 
-1. `systemclt restart sshd`
+1. `systemctl restart sshd`
 
 ### Recommended, but optional ssh config
 
