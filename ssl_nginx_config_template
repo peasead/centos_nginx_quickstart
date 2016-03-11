@@ -1,5 +1,12 @@
 server {
        listen         80;
+       
+       server_tokens off;
+       add_header Strict-Transport-Security "max-age=31536000; includeSubdomains";
+       add_header X-Frame-Options DENY;
+       add_header X-XSS-Protection "1; mode=block";
+       add_header X-Content-Type-Options nosniff;
+       
        server_name    www.new_domain_name.com new_domain_name.com
        return         301 https://www.new_domain_name.com;
 }
@@ -7,7 +14,6 @@ server {
 server {
         listen 443;
 
-        etag off;
         server_tokens off;
         ssl on;
         ssl_certificate /etc/letsencrypt/live/new_domain_name.com/fullchain.pem;
