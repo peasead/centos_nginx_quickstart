@@ -3,6 +3,9 @@ server {
 
         root /usr/share/nginx/html/new_domain_name;
         index index.html;
+        add_header X-Frame-Options DENY;
+        add_header X-XSS-Protection "1; mode=block";
+        add_header X-Content-Type-Options nosniff;
 
         server_name new_domain_name.com www.new_domain_name.com
 
