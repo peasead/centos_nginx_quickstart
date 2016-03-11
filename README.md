@@ -61,3 +61,23 @@ Lets get some SSL set up...it's free, there's no reason not to
 1. `letsencrypt certonly --standalone -d new_domain_name.com -d www.new_domain_name.com`
 1. `systemctl start nginx`
 1. Browse to your new site via www & non-www. It should redirect you to https://www.new_domain_name.com
+
+## Security Check
+
+### Web server
+
+I did a scan with [nikto](https://cirt.net/Nikto2) and everything looks above board...with the exception of a pretty large false positive where nikto seems to think this is an IBM Domino web server, which it obviously isn't. 
+
+This is a [well documented issue with nikto](https://github.com/sullo/nikto/issues?utf8=%E2%9C%93&q=domino). If you can submit a pull to them, I'm sure they'd appreciate it, but as you can check, the directories that they list as vulnerable don't exist because, as previously mentioned, this isn't an IBM Domino web server.
+
+### Port scan
+
+I ran an `nmap` scan against the server to ensure only 22, 80, 443 were open, but someone more creative may want to push a bit harder there.
+
+## To Do
+
+### Server Security Check
+
+* vulnerabilty scan of the actual server
+
+Feel free to do some more kicking on these configs and submit pull requests with better options.
