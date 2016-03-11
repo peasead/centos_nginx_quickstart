@@ -1,0 +1,25 @@
+server {
+       listen         80;
+       server_name    www.new_domain_name.com new_domain_name.com
+       return         301 https://www.new_domain_name.com;
+}
+
+server {
+        listen 443;
+
+        ssl on;
+        ssl_certificate /etc/letsencrypt/live/new_domain_name.com/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/new_domain_name.com/privkey.pem;
+        ssl_stapling on;
+        ssl_stapling_verify on;
+        add_header Strict-Transport-Security "max-age=31536000; includeSubdomains";
+
+        root /usr/share/nginx/html/new_domain_name;
+        index index.html;
+
+        server_name new_domain_name.com www.new_domain_name.com
+
+        location / {
+                try_files $uri $uri/ /index.html;
+        }
+}
