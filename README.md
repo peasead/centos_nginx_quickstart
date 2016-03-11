@@ -91,5 +91,6 @@ I ran an `nmap` scan against the server to ensure only 22, 80, 443 were open, bu
 ### Server Security Check
 
 * vulnerabilty scan of the actual server
+* fail2ban config
 
 Feel free to do some more kicking on these configs and submit pull requests with better options.
