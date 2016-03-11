@@ -1,6 +1,8 @@
 server {
         listen 80;
 
+        etag off;
+        server_tokens off;
         root /usr/share/nginx/html/new_domain_name;
         index index.html;
         add_header X-Frame-Options DENY;
