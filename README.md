@@ -36,7 +36,7 @@ PermitRootLogin no
 ```
 This is highly recommended, but I don't want to micro-manage.
 
-# Web Sites (including SSL)
+# Web Site Config (including SSL)
 
 ## Install nginx, config nginx
 
