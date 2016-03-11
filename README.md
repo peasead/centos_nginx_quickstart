@@ -55,8 +55,8 @@ This is highly recommended, but I don't want to micro-manage.
 Lets get some SSL set up...it's free, there's no reason not to  
 [Detailed instructions if needed](http://mangolassi.it/topic/7127/setting-up-letsencrypt-on-a-centos-7-nginx-proxy)
 
-1. Update your nginx conf file for new_domain_name.com to allow SSL, do this by using the `ssl_nginx_config` template in this directory
-1. Replace your new nginx ssl config file with the old one at `/etc/nginx/conf.d/new_domain_name.conf`
+1. Update your nginx conf file for `new_domain_name.com` to allow SSL, do this by using the `ssl_nginx_config` template in this directory
+1. Replace your old nginx ssl config file with the new one at `/etc/nginx/conf.d/new_domain_name.conf`
 1. `nginx -t` > this could fail because the SSL keys aren't present yet
 
 ### First time configuring SSL on a server: 
@@ -74,13 +74,13 @@ Lets get some SSL set up...it's free, there's no reason not to
 1. `systemctl start nginx`
 1. Browse to your new site via www & non-www. It should redirect you to https://www.new_domain_name.com
 
-## Security Check
+## Security Checks
 
 ### Web server
 
 I did a scan with [nikto](https://cirt.net/Nikto2) and everything looks above board...with the exception of a pretty large false positive where nikto seems to think this is an IBM Domino web server, which it obviously isn't. 
 
-This is a [well documented issue with nikto](https://github.com/sullo/nikto/issues?utf8=%E2%9C%93&q=domino). If you can submit a pull to them, I'm sure they'd appreciate it, but as you can check, the directories that they list as vulnerable don't exist because, as previously mentioned, this isn't an IBM Domino web server.
+This is a [well documented issue with nikto](https://github.com/sullo/nikto/issues?utf8=%E2%9C%93&q=domino). If you can fix the issue and submit a pull to them, I'm sure they'd appreciate it, but as you can check, the directories that they list as vulnerable don't exist because, as previously mentioned, this isn't an IBM Domino web server.
 
 ### Port scan
 
