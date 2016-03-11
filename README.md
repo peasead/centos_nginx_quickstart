@@ -1,4 +1,4 @@
-### Secure CentOS box
+# Secure CentOS box
 
 ## SELinux
 
@@ -23,7 +23,7 @@ AuthorizedKeysFile      .ssh/authorized_keys
 PasswordAuthentication	no
 ```
 
-### Web Sites (including SSL)
+# Web Sites (including SSL)
 
 ## Install nginx, config nginx
 
@@ -43,7 +43,7 @@ Make sure your HTML files are here: /usr/share/nginx/html/new_domain_name
 1. Replace your new nginx ssl config file with the old one at `/etc/nginx/conf.d/new_domain_name.conf`
 1. `nginx -t` > this could fail because the SSL keys aren't present yet
 
-# First time configuring SSL on a server: 
+### First time configuring SSL on a server: 
 
 Lets get some SSL set up...it's free, there's no reason not to
 
@@ -52,7 +52,7 @@ Lets get some SSL set up...it's free, there's no reason not to
 1. `letsencrypt certonly --standalone --email your_email_address@email.com --agree-tos -d new_domain_name.com -d www.new_domain_name.com`
 1. `systemctl start nginx`
 
-# Anytime after the first time on a server: 
+### Anytime after the first time on a server: 
 
 1. `systemctl stop nginx`
 1. `letsencrypt certonly --standalone -d new_domain_name.com -d www.new_domain_name.com`
