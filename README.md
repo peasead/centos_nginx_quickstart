@@ -20,10 +20,12 @@ This is the config I found helpful when building a CentOS 7.2 box on Digital Oce
 
 1. Upload your public key to the server if it isn't present - [Specific instructions](https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server)
 1. Edit `/etc/ssh/sshd_config` and make/verify the following:
-```
-AuthorizedKeysFile      .ssh/authorized_keys
-PasswordAuthentication	no
-```
+
+  ```
+  AuthorizedKeysFile      .ssh/authorized_keys
+  PasswordAuthentication	no
+  ```
+
 1. `systemclt restart sshd`
 
 ### Recommended, but optional ssh config
