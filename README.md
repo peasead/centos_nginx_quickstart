@@ -17,7 +17,7 @@
 ## Secure ssh
 
 1. Upload your public key to the server if it isn't present - [Specific instructions](https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server)
-2. Edit `/etc/ssh/sshd_config` and make the following changes:
+1. Edit `/etc/ssh/sshd_config` and make/verify the following:
 ```
 AuthorizedKeysFile      .ssh/authorized_keys
 PasswordAuthentication	no
