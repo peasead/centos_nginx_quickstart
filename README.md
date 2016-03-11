@@ -26,6 +26,14 @@ PasswordAuthentication	no
 ```
 1. `systemclt restart sshd`
 
+### Recommended, but optional ssh config
+
+You should create a lower privileged user and disable ssh by root in `/etc/ssh/sshd_config`
+```
+PermitRootLogin no
+```
+This is highly recommended, but I don't want to micro-manage.
+
 # Web Sites (including SSL)
 
 ## Install nginx, config nginx
