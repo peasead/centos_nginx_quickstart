@@ -1,5 +1,7 @@
 # Secure CentOS box
 
+This is the config I found helpful when building a CentOS 7.2 box on Digital Ocean. It came pretty open, so I did what I thought would be best...certainly open to opinions.
+
 ## SELinux
 
 1. Set `SELINUX=enforcing` in `/etc/sysconfig/selinux`
