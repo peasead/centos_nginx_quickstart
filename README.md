@@ -11,10 +11,10 @@ This is the config I found helpful when building a CentOS 7.2 box on Digital Oce
 
 1. `systemctl start firewalld.service`
 1. `systemctl enable firewalld.service`
-1. `sudo firewall-cmd --permanent --zone=public --add-service=http`
-1. `sudo firewall-cmd --permanent --zone=public --add-service=https`
-1. `sudo firewall-cmd --permanent --zone=public --add-service=ssh`
-1. `sudo firewall-cmd --reload`
+1. `firewall-cmd --permanent --zone=public --add-service=http`
+1. `firewall-cmd --permanent --zone=public --add-service=https`
+1. `firewall-cmd --permanent --zone=public --add-service=ssh`
+1. `firewall-cmd --reload`
 
 ## Secure ssh
 
