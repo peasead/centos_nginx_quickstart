@@ -28,7 +28,7 @@ PasswordAuthentication	no
 
 ## Install nginx, config nginx
 
-Make sure your HTML files are here: /usr/share/nginx/html/new_domain_name
+**Make sure your HTML files are here: /usr/share/nginx/html/new_domain_name**
 
 1. `yum install -y nginx`
 1. You need to make DNS changes in the for @ and * for the IP address of the web server. This needs to be done in at your DNS registrar
