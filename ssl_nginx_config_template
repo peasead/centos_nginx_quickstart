@@ -16,6 +16,7 @@ server {
 
         server_tokens off;
         ssl on;
+        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
         ssl_certificate /etc/letsencrypt/live/new_domain_name.com/fullchain.pem;
         ssl_certificate_key /etc/letsencrypt/live/new_domain_name.com/privkey.pem;
         ssl_stapling on;
