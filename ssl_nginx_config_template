@@ -11,6 +11,7 @@ server {
        return         301 https://www.new_domain_name.com;
 }
 
+# http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_protocols
 server {
         listen 443;
 
